@@ -1,3 +1,5 @@
+import { ProductList } from './components/productList/ProductList'
+
 import './App.css'
 
 function App() {
@@ -5,7 +7,8 @@ function App() {
 
   return (
     <>
-      <h1>Hello World</h1>
+      <h1>Product Lists</h1>
+      <ProductList />
     </>
   )
 }
