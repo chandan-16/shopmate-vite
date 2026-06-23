@@ -5,7 +5,9 @@ export const ProductList = () => {
 
   const [url, setUrl] = useState("http://localhost:3000/products");
 
-  const { data : products, loading} = useFetch(url);
+  const { data : products, loading, error } = useFetch(url);
+
+
 
   return (
     <>
@@ -13,6 +15,10 @@ export const ProductList = () => {
       <button onClick={() => setUrl("http://localhost:3000/products?in_stock=true")}>Instock Only</button>
       {
         loading && <p>Loading products...</p>
+      }
+
+      {
+        error && <p>{error}</p>
       }
       <section>
         {
